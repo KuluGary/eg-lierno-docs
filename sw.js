@@ -36,11 +36,11 @@ self.__precacheManifest = [
     "url": "f0e45107-02a22ac72de90821f3f0.js"
   },
   {
-    "url": "app-d27973daeb390f83faa7.js"
+    "url": "app-4e41365d74e1877279ee.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "9a0a3d3d3972689fe1777154e5f0453b"
+    "revision": "2a737a01f16eaae0fc2eb30368bd3794"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-241020a1cf7d0f317bbe.js"
@@ -51,7 +51,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "17b639021b52a1cd4672224091fc2ac7"
+    "revision": "2198e949dddd9eda2737f61fb16bc8b7"
   },
   {
     "url": "polyfill-5204fa10d5950c3006a4.js"
@@ -150,7 +150,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/eg-lierno-docs/app-d27973daeb390f83faa7.js`))) {
+  if (!resources || !(await caches.match(`/eg-lierno-docs/app-4e41365d74e1877279ee.js`))) {
     return await fetch(event.request)
   }
 
