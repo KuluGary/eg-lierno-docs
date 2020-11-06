@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-2f7090bbd73e0a8e4517.js"
+    "url": "webpack-runtime-673a9f8ecadb52c9aad5.js"
   },
   {
     "url": "framework-305b3707783ccc9d7ca6.js"
@@ -36,11 +36,11 @@ self.__precacheManifest = [
     "url": "f0e45107-02a22ac72de90821f3f0.js"
   },
   {
-    "url": "app-8cf494ead727f382f1fa.js"
+    "url": "app-d27973daeb390f83faa7.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "9c94804eb792c05aa7a1a4400b4c6d37"
+    "revision": "9a0a3d3d3972689fe1777154e5f0453b"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-241020a1cf7d0f317bbe.js"
@@ -51,14 +51,14 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "e587dee94cb704b637302c4a32120a8e"
+    "revision": "17b639021b52a1cd4672224091fc2ac7"
   },
   {
     "url": "polyfill-5204fa10d5950c3006a4.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "e99995272f3898adda6980ac6b90cc64"
+    "revision": "4f19b393618bc30b2797be5dabcab838"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -145,12 +145,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/eg-lierno-docs`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-8cf494ead727f382f1fa.js`))) {
+  if (!resources || !(await caches.match(`/eg-lierno-docs/app-d27973daeb390f83faa7.js`))) {
     return await fetch(event.request)
   }
 
@@ -163,7 +163,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/eg-lierno-docs/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
