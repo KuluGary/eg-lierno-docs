@@ -1,24 +1,18 @@
 # Sidebar navigation
 
-- label: 'Introduction'
+- label: 'Introducción'
   link: '/'
-- label: 'Getting started'
-  link: '/getting-started'
-- label: Usage
+- label: Utilización
   items:
-    - label: 'Creating docs'
-      link: '/usage/creating-docs'
-    - label: 'Navigation'
-      link: '/usage/navigation'
-    - label: 'Shadowing'
-      link: '/usage/shadowing'
-- label: More
+    - label: 'Tiradas de dados'
+      link: '/usage/roll'
+    - label: 'Ataques'
+      link: '/usage/attack'
+    - label: 'Tiradas de salvación'
+      link: '/usage/saves'
+    - label: 'Manejo de personajes'
+      link: '/usage/char'
+- label: Sitios de interés
   items:
-    - label: FAQ
-      link: /faq
-    - label: Changelog
-      link: /changelog
-- label: Community
-  items:
-    - label: 'Github'
-      link: https://github.com/rocketseat/gatsby-themes
+    - label: 'Lierno app'
+      link: https://lierno.netlify.app/
